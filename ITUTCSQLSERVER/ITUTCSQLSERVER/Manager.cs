@@ -17,16 +17,18 @@ namespace ITUTCSQLSERVER
             cmd.ExecuteNonQuery();
             Database.Connection.Close();
         }
-        public static void Insert(string Var1, string Var2)
+        public static void Insert(string TEACHERID, string TEACHER_NAME, string TEACHER_ADVISOR_GROUP)
         {
             try
             {
                 Database.Connection.Open();
-                string sqlCommand = @"INSER INTO table() VALUES()";
+                string sqlCommand = @"INSERT INTO tbTeacher(ACTIVITY_ID,ACTIVITY_NAME,ACTIVITY_DATE,ACTIVITY_STATUS) VALUES(@ACTIVITY_ID,@ACTIVITY_NAME,@ACTIVITY_DATE,@ACTIVITY_STATUS)";
                 SqlCommand Command = new SqlCommand(sqlCommand, Database.Connection);
                 Command.Prepare();
-                Command.Parameters.AddWithValue("@var1", Var1);
-                Command.Parameters.AddWithValue("@var2", Var2);
+                Command.Parameters.AddWithValue("@ACTIVITY_ID", TEACHERID);
+                Command.Parameters.AddWithValue("@ACTIVITY_NAME", TEACHER_NAME);
+                Command.Parameters.AddWithValue("@ACTIVITY_DATE", TEACHER_ADVISOR_GROUP);
+                Command.Parameters.AddWithValue("@ACTIVITY_STATUS", TEACHER_ADVISOR_GROUP);
                 Command.ExecuteNonQuery();
             }
             finally
@@ -67,5 +69,6 @@ namespace ITUTCSQLSERVER
                 Database.Connection.Close();
             }
         }
+
     }
 }
