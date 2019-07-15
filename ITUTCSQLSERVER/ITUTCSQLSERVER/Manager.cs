@@ -17,7 +17,7 @@ namespace ITUTCSQLSERVER
             cmd.ExecuteNonQuery();
             Database.Connection.Close();
         }
-        public static void Insert(string TEACHERID, string TEACHER_NAME, string TEACHER_ADVISOR_GROUP)
+        public static void Insert(string ACTIVITYID, string ACTIVITYNAME, string ACTIVITYDATE, string ACTIVITYSTATUS)
         {
             try
             {
@@ -25,11 +25,14 @@ namespace ITUTCSQLSERVER
                 string sqlCommand = @"INSERT INTO tbTeacher(ACTIVITY_ID,ACTIVITY_NAME,ACTIVITY_DATE,ACTIVITY_STATUS) VALUES(@ACTIVITY_ID,@ACTIVITY_NAME,@ACTIVITY_DATE,@ACTIVITY_STATUS)";
                 SqlCommand Command = new SqlCommand(sqlCommand, Database.Connection);
                 Command.Prepare();
-                Command.Parameters.AddWithValue("@ACTIVITY_ID", TEACHERID);
-                Command.Parameters.AddWithValue("@ACTIVITY_NAME", TEACHER_NAME);
-                Command.Parameters.AddWithValue("@ACTIVITY_DATE", TEACHER_ADVISOR_GROUP);
-                Command.Parameters.AddWithValue("@ACTIVITY_STATUS", TEACHER_ADVISOR_GROUP);
+                Command.Parameters.AddWithValue("@ACTIVITY_ID", ACTIVITYID);
+                Command.Parameters.AddWithValue("@ACTIVITY_NAME", ACTIVITYNAME);
+                Command.Parameters.AddWithValue("@ACTIVITY_DATE", ACTIVITYDATE);
+                Command.Parameters.AddWithValue("@ACTIVITY_STATUS", ACTIVITYSTATUS);
                 Command.ExecuteNonQuery();
+
+                
+
             }
             finally
             {
