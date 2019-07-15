@@ -16,5 +16,15 @@ namespace ITUTCSQLSERVER
         {
             InitializeComponent();
         }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button1_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
