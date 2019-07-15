@@ -30,15 +30,15 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.manageDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonSAVE = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtACTIVITYID = new System.Windows.Forms.TextBox();
+            this.txtACTIVITYNAME = new System.Windows.Forms.TextBox();
+            this.txtACTIVITYDATE = new System.Windows.Forms.TextBox();
+            this.txtACTIVITYSTATUS = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,16 +62,16 @@
             this.manageDatabaseToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
             this.manageDatabaseToolStripMenuItem.Text = "Manage Database";
             // 
-            // button1
+            // buttonSAVE
             // 
-            this.button1.Location = new System.Drawing.Point(183, 250);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "บันทึกข้อมูล";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Label3_Click);
-            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Button1_MouseClick);
+            this.buttonSAVE.Location = new System.Drawing.Point(183, 250);
+            this.buttonSAVE.Name = "buttonSAVE";
+            this.buttonSAVE.Size = new System.Drawing.Size(75, 23);
+            this.buttonSAVE.TabIndex = 4;
+            this.buttonSAVE.Text = "บันทึกข้อมูล";
+            this.buttonSAVE.UseVisualStyleBackColor = true;
+            this.buttonSAVE.Click += new System.EventHandler(this.Label3_Click);
+            this.buttonSAVE.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Button1_MouseClick);
             // 
             // label1
             // 
@@ -110,33 +110,33 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "สถานะ";
             // 
-            // textBox1
+            // txtACTIVITYID
             // 
-            this.textBox1.Location = new System.Drawing.Point(183, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtACTIVITYID.Location = new System.Drawing.Point(183, 65);
+            this.txtACTIVITYID.Name = "txtACTIVITYID";
+            this.txtACTIVITYID.Size = new System.Drawing.Size(100, 20);
+            this.txtACTIVITYID.TabIndex = 0;
             // 
-            // textBox2
+            // txtACTIVITYNAME
             // 
-            this.textBox2.Location = new System.Drawing.Point(183, 106);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtACTIVITYNAME.Location = new System.Drawing.Point(183, 106);
+            this.txtACTIVITYNAME.Name = "txtACTIVITYNAME";
+            this.txtACTIVITYNAME.Size = new System.Drawing.Size(100, 20);
+            this.txtACTIVITYNAME.TabIndex = 1;
             // 
-            // textBox3
+            // txtACTIVITYDATE
             // 
-            this.textBox3.Location = new System.Drawing.Point(183, 147);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtACTIVITYDATE.Location = new System.Drawing.Point(183, 147);
+            this.txtACTIVITYDATE.Name = "txtACTIVITYDATE";
+            this.txtACTIVITYDATE.Size = new System.Drawing.Size(100, 20);
+            this.txtACTIVITYDATE.TabIndex = 2;
             // 
-            // textBox4
+            // txtACTIVITYSTATUS
             // 
-            this.textBox4.Location = new System.Drawing.Point(183, 186);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
+            this.txtACTIVITYSTATUS.Location = new System.Drawing.Point(183, 186);
+            this.txtACTIVITYSTATUS.Name = "txtACTIVITYSTATUS";
+            this.txtACTIVITYSTATUS.Size = new System.Drawing.Size(100, 20);
+            this.txtACTIVITYSTATUS.TabIndex = 3;
             // 
             // label5
             // 
@@ -183,15 +183,15 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtACTIVITYSTATUS);
+            this.Controls.Add(this.txtACTIVITYDATE);
+            this.Controls.Add(this.txtACTIVITYNAME);
+            this.Controls.Add(this.txtACTIVITYID);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonSAVE);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Activity";
@@ -207,15 +207,15 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem manageDatabaseToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonSAVE;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtACTIVITYID;
+        private System.Windows.Forms.TextBox txtACTIVITYNAME;
+        private System.Windows.Forms.TextBox txtACTIVITYDATE;
+        private System.Windows.Forms.TextBox txtACTIVITYSTATUS;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
