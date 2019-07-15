@@ -24,10 +24,10 @@ namespace ITUTCSQLSERVER
             String ACTIVITYID_DATE = txtACTIVITYDATE.Text;
             String ACTIVITY_STATUS = txtACTIVITYSTATUS.Text;
 
-            label5.Text = ACTIVITY_ID;
-            label6.Text = ACTIVITY_NAME;
-            label7.Text = ACTIVITYID_DATE;
-            label8.Text = ACTIVITY_STATUS;
+            //label5.Text = ACTIVITY_ID;
+            //label6.Text = ACTIVITY_NAME;
+            ///label7.Text = ACTIVITYID_DATE;
+            //label8.Text = ACTIVITY_STATUS;
 
             Manager.Insert(ACTIVITY_ID, ACTIVITY_NAME, ACTIVITYID_DATE, ACTIVITY_STATUS);
             MessageBox.Show("บันทึก", "แจ้งเตือน");
