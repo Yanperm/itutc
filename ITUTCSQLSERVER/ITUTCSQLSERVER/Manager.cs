@@ -17,7 +17,7 @@ namespace ITUTCSQLSERVER
             cmd.ExecuteNonQuery();
             Database.Connection.Close();
         }
-        public static void Insert(string ACTIVITYID, string ACTIVITYNAME, string ACTIVITYDATE, string ACTIVITYSTATUS)
+        public static void Insert(string ACTIVITY_ID, string ACTIVITY_NAME, string ACTIVITY_DATE, string ACTIVITY_STATUS)
         {
             try
             {
@@ -25,10 +25,10 @@ namespace ITUTCSQLSERVER
                 string sqlCommand = @"INSERT INTO tbTeacher(ACTIVITY_ID,ACTIVITY_NAME,ACTIVITY_DATE,ACTIVITY_STATUS) VALUES(@ACTIVITY_ID,@ACTIVITY_NAME,@ACTIVITY_DATE,@ACTIVITY_STATUS)";
                 SqlCommand Command = new SqlCommand(sqlCommand, Database.Connection);
                 Command.Prepare();
-                Command.Parameters.AddWithValue("@ACTIVITY_ID", ACTIVITYID);
-                Command.Parameters.AddWithValue("@ACTIVITY_NAME", ACTIVITYNAME);
-                Command.Parameters.AddWithValue("@ACTIVITY_DATE", ACTIVITYDATE);
-                Command.Parameters.AddWithValue("@ACTIVITY_STATUS", ACTIVITYSTATUS);
+                Command.Parameters.AddWithValue("@ACTIVITY_ID", ACTIVITY_ID);
+                Command.Parameters.AddWithValue("@ACTIVITY_NAME", ACTIVITY_NAME);
+                Command.Parameters.AddWithValue("@ACTIVITY_DATE", ACTIVITY_DATE);
+                Command.Parameters.AddWithValue("@ACTIVITY_STATUS", ACTIVITY_STATUS);
                 Command.ExecuteNonQuery();
 
                 
@@ -39,18 +39,18 @@ namespace ITUTCSQLSERVER
                 Database.Connection.Close();
             }
         }
-        public static void Update(string ACTIVITYID, string ACTIVITYNAME, string ACTIVITYDATE, string ACTIVITYSTATUS)
+        public static void Update(string ACTIVITY_ID, string ACTIVITY_NAME, string ACTIVITY_DATE, string ACTIVITY_STATUS)
         {
             try
             {
                 Database.Connection.Open();
-                string sqlCommand = "UPDATE tbTeacher SET ACTIVITY_NAME=@ACTIVITY_NAME,ACTIVITY_DATE=@ACTIVITY_DATE,ACTIVITY_STATUS=@ACTIVITY_STATUS WHERE ACTIVITY_ID=@ACTIVITY_ID'" + ACTIVITYID + ACTIVITYNAME + ACTIVITYDATE + ACTIVITYSTATUS;
+                string sqlCommand = "UPDATE tbTeacher SET ACTIVITY_NAME=@ACTIVITY_NAME,ACTIVITY_DATE=@ACTIVITY_DATE,ACTIVITY_STATUS=@ACTIVITY_STATUS WHERE ACTIVITY_ID=@ACTIVITY_ID'" + ACTIVITY_ID + ACTIVITY_NAME + ACTIVITY_DATE + ACTIVITY_STATUS;
                 SqlCommand Command = new SqlCommand(sqlCommand, Database.Connection);
                 Command.Prepare();
-                Command.Parameters.AddWithValue("@ACTIVITY_ID", ACTIVITYID);
-                Command.Parameters.AddWithValue("@ACTIVITY_NAME", ACTIVITYNAME);
-                Command.Parameters.AddWithValue("@ACTIVITY_DATE", ACTIVITYDATE);
-                Command.Parameters.AddWithValue("@ACTIVITY_STATUS", ACTIVITYSTATUS);
+                Command.Parameters.AddWithValue("@ACTIVITY_ID", ACTIVITY_ID);
+                Command.Parameters.AddWithValue("@ACTIVITY_NAME", ACTIVITY_NAME);
+                Command.Parameters.AddWithValue("@ACTIVITY_DATE", ACTIVITY_DATE);
+                Command.Parameters.AddWithValue("@ACTIVITY_STATUS", ACTIVITY_STATUS);
                 Command.ExecuteNonQuery();
             }
             finally
@@ -58,7 +58,7 @@ namespace ITUTCSQLSERVER
                 Database.Connection.Close();
             }
         }
-        public static void Delete(string ACTIVITYID)
+        public static void Delete(string ACTIVITY_ID)
         {
             try
             {
@@ -66,7 +66,7 @@ namespace ITUTCSQLSERVER
                 string sqlCommand = @"DELETE FROM tbTeacher WHERE ACTIVITY_ID=@ACTIVITY_ID";
                 SqlCommand Command = new SqlCommand(sqlCommand, Database.Connection);
                 Command.Prepare();
-                Command.Parameters.AddWithValue("@ACTIVITY_ID", ACTIVITYID);
+                Command.Parameters.AddWithValue("@ACTIVITY_ID", ACTIVITY_ID);
                 Command.ExecuteNonQuery();
             }
             finally
