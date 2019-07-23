@@ -22,7 +22,7 @@ namespace ITUTCSQLSERVER
             String STUDENT_NAME = txtSTUDENT_NAME.Text;
             String STUDENT_LASTNAME = txtSTUDENT_LASTNAME.Text;
             String STUDENT_TEL = txtSTUDENT_TEL.Text;
-            Manager.Insertstudent(STUDENT_NAME, STUDENT_LASTNAME, STUDENT_TEL);
+            Manager.InsertStudent(STUDENT_NAME, STUDENT_LASTNAME, STUDENT_TEL);
             MessageBox.Show("บันทึก", "แจ้งเตือน");
         }
 
@@ -44,6 +44,11 @@ namespace ITUTCSQLSERVER
         private void Label2_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void Student_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
