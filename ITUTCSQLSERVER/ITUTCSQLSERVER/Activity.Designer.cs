@@ -77,6 +77,7 @@
             this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "ชื่อกิจกรรม";
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // label2
             // 
