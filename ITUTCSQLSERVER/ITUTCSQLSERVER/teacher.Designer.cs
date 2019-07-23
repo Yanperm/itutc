@@ -33,10 +33,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTEACHER_NAME = new System.Windows.Forms.TextBox();
+            this.txtTEACHER_LASTNAME = new System.Windows.Forms.TextBox();
+            this.txtTEACHER_TEL = new System.Windows.Forms.TextBox();
+            this.txtTEACHER_ADVISOR = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -87,33 +87,33 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "ที่ปรึกษาแผนก";
             // 
-            // textBox1
+            // txtTEACHER_NAME
             // 
-            this.textBox1.Location = new System.Drawing.Point(105, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtTEACHER_NAME.Location = new System.Drawing.Point(105, 63);
+            this.txtTEACHER_NAME.Name = "txtTEACHER_NAME";
+            this.txtTEACHER_NAME.Size = new System.Drawing.Size(166, 20);
+            this.txtTEACHER_NAME.TabIndex = 5;
             // 
-            // textBox2
+            // txtTEACHER_LASTNAME
             // 
-            this.textBox2.Location = new System.Drawing.Point(105, 106);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(166, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtTEACHER_LASTNAME.Location = new System.Drawing.Point(105, 106);
+            this.txtTEACHER_LASTNAME.Name = "txtTEACHER_LASTNAME";
+            this.txtTEACHER_LASTNAME.Size = new System.Drawing.Size(166, 20);
+            this.txtTEACHER_LASTNAME.TabIndex = 6;
             // 
-            // textBox3
+            // txtTEACHER_TEL
             // 
-            this.textBox3.Location = new System.Drawing.Point(105, 144);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(166, 20);
-            this.textBox3.TabIndex = 7;
+            this.txtTEACHER_TEL.Location = new System.Drawing.Point(105, 144);
+            this.txtTEACHER_TEL.Name = "txtTEACHER_TEL";
+            this.txtTEACHER_TEL.Size = new System.Drawing.Size(166, 20);
+            this.txtTEACHER_TEL.TabIndex = 7;
             // 
-            // textBox4
+            // txtTEACHER_ADVISOR
             // 
-            this.textBox4.Location = new System.Drawing.Point(105, 179);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(166, 20);
-            this.textBox4.TabIndex = 8;
+            this.txtTEACHER_ADVISOR.Location = new System.Drawing.Point(105, 179);
+            this.txtTEACHER_ADVISOR.Name = "txtTEACHER_ADVISOR";
+            this.txtTEACHER_ADVISOR.Size = new System.Drawing.Size(166, 20);
+            this.txtTEACHER_ADVISOR.TabIndex = 8;
             // 
             // button1
             // 
@@ -142,10 +142,10 @@
             this.ClientSize = new System.Drawing.Size(341, 303);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTEACHER_ADVISOR);
+            this.Controls.Add(this.txtTEACHER_TEL);
+            this.Controls.Add(this.txtTEACHER_LASTNAME);
+            this.Controls.Add(this.txtTEACHER_NAME);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -165,10 +165,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTEACHER_NAME;
+        private System.Windows.Forms.TextBox txtTEACHER_LASTNAME;
+        private System.Windows.Forms.TextBox txtTEACHER_TEL;
+        private System.Windows.Forms.TextBox txtTEACHER_ADVISOR;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }

@@ -29,11 +29,21 @@ namespace ITUTCSQLSERVER
             ///label7.Text = ACTIVITYID_DATE;
             //label8.Text = ACTIVITY_STATUS;
 
-            Manager.Insert(ACTIVITY_ID, ACTIVITY_NAME, ACTIVITYID_DATE, ACTIVITY_STATUS);
+            Manager.InsertActivity(ACTIVITY_ID, ACTIVITY_NAME, ACTIVITYID_DATE, ACTIVITY_STATUS);
             MessageBox.Show("บันทึก", "แจ้งเตือน");
         }
 
         private void Button1_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Activity_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
         {
 
         }
