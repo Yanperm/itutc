@@ -39,16 +39,18 @@ namespace ITUTCSQLSERVER
                 Database.Connection.Close();
             }
         }
-        public static void Update(string Var1, string Var2)
+        public static void Update(string ACTIVITYID, string ACTIVITYNAME, string ACTIVITYDATE, string ACTIVITYSTATUS)
         {
             try
             {
                 Database.Connection.Open();
-                string sqlCommand = "UPDATE table SET Field=@field WHERE field_id='" + Var1 + Var2;
+                string sqlCommand = "UPDATE tbTeacher SET ACTIVITY_NAME=@ACTIVITY_NAME,ACTIVITY_DATE=@ACTIVITY_DATE,ACTIVITY_STATUS=@ACTIVITY_STATUS WHERE ACTIVITY_ID=@ACTIVITY_ID'" + ACTIVITYID + ACTIVITYNAME + ACTIVITYDATE + ACTIVITYSTATUS;
                 SqlCommand Command = new SqlCommand(sqlCommand, Database.Connection);
                 Command.Prepare();
-                Command.Parameters.AddWithValue("@var1", Var1);
-                Command.Parameters.AddWithValue("@var2", Var2);
+                Command.Parameters.AddWithValue("@ACTIVITY_ID", ACTIVITYID);
+                Command.Parameters.AddWithValue("@ACTIVITY_NAME", ACTIVITYNAME);
+                Command.Parameters.AddWithValue("@ACTIVITY_DATE", ACTIVITYDATE);
+                Command.Parameters.AddWithValue("@ACTIVITY_STATUS", ACTIVITYSTATUS);
                 Command.ExecuteNonQuery();
             }
             finally
@@ -56,15 +58,15 @@ namespace ITUTCSQLSERVER
                 Database.Connection.Close();
             }
         }
-        public static void Delete(string VarID)
+        public static void Delete(string ACTIVITYID)
         {
             try
             {
                 Database.Connection.Open();
-                string sqlCommand = @"DELETE FROM table WHERE VarID=@VarID";
+                string sqlCommand = @"DELETE FROM tbTeacher WHERE ACTIVITY_ID=@ACTIVITY_ID";
                 SqlCommand Command = new SqlCommand(sqlCommand, Database.Connection);
                 Command.Prepare();
-                Command.Parameters.AddWithValue("@StudentID", VarID);
+                Command.Parameters.AddWithValue("@ACTIVITY_ID", ACTIVITYID);
                 Command.ExecuteNonQuery();
             }
             finally
