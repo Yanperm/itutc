@@ -22,7 +22,7 @@ namespace ITUTCSQLSERVER
             try
             {
                 Database.Connection.Open();
-                string sqlCommand = @"INSERT INTO tbTeacher(ACTIVITY_ID,ACTIVITY_NAME,ACTIVITY_DATE,ACTIVITY_STATUS) VALUES(@ACTIVITY_ID,@ACTIVITY_NAME,@ACTIVITY_DATE,@ACTIVITY_STATUS)";
+                string sqlCommand = @"INSERT INTO tbActivity(ACTIVITY_ID,ACTIVITY_NAME,ACTIVITY_DATE,ACTIVITY_STATUS) VALUES(@ACTIVITY_ID,@ACTIVITY_NAME,@ACTIVITY_DATE,@ACTIVITY_STATUS)";
                 SqlCommand Command = new SqlCommand(sqlCommand, Database.Connection);
                 Command.Prepare();
                 Command.Parameters.AddWithValue("@ACTIVITY_ID", ACTIVITY_ID);
@@ -44,7 +44,7 @@ namespace ITUTCSQLSERVER
             try
             {
                 Database.Connection.Open();
-                string sqlCommand = "UPDATE tbTeacher SET ACTIVITY_NAME=@ACTIVITY_NAME,ACTIVITY_DATE=@ACTIVITY_DATE,ACTIVITY_STATUS=@ACTIVITY_STATUS WHERE ACTIVITY_ID='" + ACTIVITY_ID + "'";
+                string sqlCommand = "UPDATE tbActivity SET ACTIVITY_NAME=@ACTIVITY_NAME,ACTIVITY_DATE=@ACTIVITY_DATE,ACTIVITY_STATUS=@ACTIVITY_STATUS WHERE ACTIVITY_ID='" + @ACTIVITY_ID + "'";
                 SqlCommand Command = new SqlCommand(sqlCommand, Database.Connection);
                 Command.Prepare();
                 Command.Parameters.AddWithValue("@ACTIVITY_ID", ACTIVITY_ID);
@@ -63,7 +63,7 @@ namespace ITUTCSQLSERVER
             try
             {
                 Database.Connection.Open();
-                string sqlCommand = @"DELETE FROM tbTeacher WHERE ACTIVITY_ID=@ACTIVITY_ID";
+                string sqlCommand = @"DELETE FROM tbActivity WHERE ACTIVITY_ID=@ACTIVITY_ID";
                 SqlCommand Command = new SqlCommand(sqlCommand, Database.Connection);
                 Command.Prepare();
                 Command.Parameters.AddWithValue("@ACTIVITY_ID", ACTIVITY_ID);
