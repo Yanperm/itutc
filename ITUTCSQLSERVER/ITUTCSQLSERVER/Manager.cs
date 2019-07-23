@@ -17,7 +17,7 @@ namespace ITUTCSQLSERVER
             cmd.ExecuteNonQuery();
             Database.Connection.Close();
         }
-        public static void Insert(string ACTIVITY_ID, string ACTIVITY_NAME, string ACTIVITY_DATE, string ACTIVITY_STATUS)
+        public static void InsertActivity(string ACTIVITY_ID, string ACTIVITY_NAME, string ACTIVITY_DATE, string ACTIVITY_STATUS)
         {
             try
             {
@@ -39,12 +39,12 @@ namespace ITUTCSQLSERVER
                 Database.Connection.Close();
             }
         }
-        public static void Update(string ACTIVITY_ID, string ACTIVITY_NAME, string ACTIVITY_DATE, string ACTIVITY_STATUS)
+        public static void UpdateActivity(string ACTIVITY_ID, string ACTIVITY_NAME, string ACTIVITY_DATE, string ACTIVITY_STATUS)
         {
             try
             {
                 Database.Connection.Open();
-                string sqlCommand = "UPDATE tbTeacher SET ACTIVITY_NAME=@ACTIVITY_NAME,ACTIVITY_DATE=@ACTIVITY_DATE,ACTIVITY_STATUS=@ACTIVITY_STATUS WHERE ACTIVITY_ID=@ACTIVITY_ID'" + ACTIVITY_ID + ACTIVITY_NAME + ACTIVITY_DATE + ACTIVITY_STATUS;
+                string sqlCommand = "UPDATE tbTeacher SET ACTIVITY_NAME=@ACTIVITY_NAME,ACTIVITY_DATE=@ACTIVITY_DATE,ACTIVITY_STATUS=@ACTIVITY_STATUS WHERE ACTIVITY_ID='" + ACTIVITY_ID + "'";
                 SqlCommand Command = new SqlCommand(sqlCommand, Database.Connection);
                 Command.Prepare();
                 Command.Parameters.AddWithValue("@ACTIVITY_ID", ACTIVITY_ID);
@@ -58,7 +58,7 @@ namespace ITUTCSQLSERVER
                 Database.Connection.Close();
             }
         }
-        public static void Delete(string ACTIVITY_ID)
+        public static void DeleteActivity(string ACTIVITY_ID)
         {
             try
             {
