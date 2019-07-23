@@ -49,7 +49,7 @@
             this.label1.Size = new System.Drawing.Size(244, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "จัดการข้อมูลนักศึกษา";
-            this.label1.Click += new System.EventHandler(this.lebel1_Click);
+            this.label1.Click += new System.EventHandler(this.Lebel1_Click);
             // 
             // label2
             // 
@@ -146,6 +146,7 @@
             this.Controls.Add(this.label1);
             this.Name = "student";
             this.Text = "student";
+            this.Load += new System.EventHandler(this.Student_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
