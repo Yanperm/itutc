@@ -145,5 +145,24 @@ namespace ITUTCSQLSERVER
                 Database.Connection.Close();
             }
         }
+        public static void InsertProject(string PROJECTNAME, string STUDENTID, string TEACHERID, string STATUS)
+        {
+            try
+            {
+                Database.Connection.Open();
+                string sqlCommand = @"INSERT INTO tbProject(PROJECTNAME,STUDENTID,TEACHERID,STATUS) VALUES(@PROJECTNAME,@STUDENTID,@TEACHERID,@STATUS)";
+                SqlCommand Command = new SqlCommand(sqlCommand, Database.Connection);
+                Command.Prepare();
+                Command.Parameters.AddWithValue("@PROJECTNAME", PROJECTNAME);
+                Command.Parameters.AddWithValue("@STUDENTID", STUDENTID);
+                Command.Parameters.AddWithValue("@TEACHERID", TEACHERID);
+                Command.Parameters.AddWithValue("@STATUS", STATUS);
+                Command.ExecuteNonQuery();
+            }
+            finally
+            {
+                Database.Connection.Close();
+            }
+        }
     }
 }

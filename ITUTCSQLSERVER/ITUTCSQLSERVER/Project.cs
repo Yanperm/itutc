@@ -57,10 +57,10 @@ namespace ITUTCSQLSERVER
             String PROJECTNAME = txtPROJECTNAME.Text;
             String STUDENTID = txtSTUDENTID.Text;
             String TEACHERID = txtTEACHERID.Text;
-           
+            String STATUS = this.txtSTATUS.SelectedItem.ToString();
 
 
-            Manager.InsertStudent(PROJECTNAME, STUDENTID, TEACHERID);
+            Manager.InsertProject(PROJECTNAME, STUDENTID, TEACHERID, STATUS);
             MessageBox.Show("บันทึก", "แจ้งเตือน");
         }
 
