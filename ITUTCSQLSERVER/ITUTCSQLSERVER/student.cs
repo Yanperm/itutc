@@ -10,57 +10,34 @@ using System.Windows.Forms;
 
 namespace ITUTCSQLSERVER
 {
-    public partial class student : Form
+    public partial class student: Form
     {
         public student()
         {
             InitializeComponent();
         }
 
-        private void Lebel1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            //String STUDENT_NAME = txtSTUDENT_NAME.Text;
-           // String STUDENT_LASTNAME = txtSTUDENT_LASTNAME.Text;
-            //String STUDENT_TEL = txtSTUDENT_TEL.Text;
-            //Manager.InsertStudent(STUDENT_NAME, STUDENT_LASTNAME, STUDENT_TEL);
-            //MessageBox.Show("บันทึก", "แจ้งเตือน");
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            String STUDENT_NAME = txtSTUDENT_NAME.Text;
-            String STUDENT_LASTNAME = txtSTUDENT_LASTNAME.Text;
-            String STUDENT_TEL = txtSTUDENT_TEL.Text;
-            Manager.InsertStudent(STUDENT_NAME, STUDENT_LASTNAME, STUDENT_TEL);
-            MessageBox.Show("บันทึก", "แจ้งเตือน");
-        }
-
-        private void Button1_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void Button2_MouseClick(object sender, MouseEventArgs e)
+        private void Label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Label2_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void Student_Load(object sender, EventArgs e)
+        private void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void Student_Load_1(object sender, EventArgs e)
+        private void TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
         {
 
         }
