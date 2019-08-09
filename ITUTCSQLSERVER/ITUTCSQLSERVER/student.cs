@@ -24,6 +24,15 @@ namespace ITUTCSQLSERVER
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            //String STUDENT_NAME = txtSTUDENT_NAME.Text;
+           // String STUDENT_LASTNAME = txtSTUDENT_LASTNAME.Text;
+            //String STUDENT_TEL = txtSTUDENT_TEL.Text;
+            //Manager.InsertStudent(STUDENT_NAME, STUDENT_LASTNAME, STUDENT_TEL);
+            //MessageBox.Show("บันทึก", "แจ้งเตือน");
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
             String STUDENT_NAME = txtSTUDENT_NAME.Text;
             String STUDENT_LASTNAME = txtSTUDENT_LASTNAME.Text;
             String STUDENT_TEL = txtSTUDENT_TEL.Text;
