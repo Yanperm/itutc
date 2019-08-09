@@ -86,9 +86,6 @@ namespace ITUTCSQLSERVER
                 Command.Parameters.AddWithValue("@STUDENT_LASTNAME", STUDENT_LASTNAME);
                 Command.Parameters.AddWithValue("@STUDENT_TEL", STUDENT_TEL);
                 Command.ExecuteNonQuery();
-
-
-
             }
             finally
             {
