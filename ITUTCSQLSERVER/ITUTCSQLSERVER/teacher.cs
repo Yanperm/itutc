@@ -31,5 +31,10 @@ namespace ITUTCSQLSERVER
         {
 
         }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
