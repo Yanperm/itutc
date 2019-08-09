@@ -17,23 +17,32 @@ namespace ITUTCSQLSERVER
             InitializeComponent();
         }
 
-        private void lebel1_Click(object sender, EventArgs e)
+        private void Lebel1_Click(object sender, EventArgs e)
         {
-            String STUDENT_NAME = txtSTUDENT_NAME.Text;
-            String STUDENT_LASTNAME = txtSTUDENT_LASTNAME.Text;
-            String STUDENT_TEL = txtSTUDENT_TEL.Text;
-            Manager.Insertstudent(STUDENT_NAME, STUDENT_LASTNAME, STUDENT_TEL);
-            MessageBox.Show("บันทึก", "แจ้งเตือน");
+           
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            //String STUDENT_NAME = txtSTUDENT_NAME.Text;
+           // String STUDENT_LASTNAME = txtSTUDENT_LASTNAME.Text;
+            //String STUDENT_TEL = txtSTUDENT_TEL.Text;
+            //Manager.InsertStudent(STUDENT_NAME, STUDENT_LASTNAME, STUDENT_TEL);
+            //MessageBox.Show("บันทึก", "แจ้งเตือน");
+        }
 
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            String STUDENT_NAME = txtSTUDENT_NAME.Text;
+            String STUDENT_LASTNAME = txtSTUDENT_LASTNAME.Text;
+            String STUDENT_TEL = txtSTUDENT_TEL.Text;
+            Manager.InsertStudent(STUDENT_NAME, STUDENT_LASTNAME, STUDENT_TEL);
+            MessageBox.Show("บันทึก", "แจ้งเตือน");
         }
 
         private void Button1_MouseClick(object sender, MouseEventArgs e)
         {
-
+            
         }
 
         private void Button2_MouseClick(object sender, MouseEventArgs e)
@@ -44,6 +53,16 @@ namespace ITUTCSQLSERVER
         private void Label2_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void Student_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Student_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
