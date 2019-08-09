@@ -36,10 +36,9 @@
             this.txtPROJECTNAME = new System.Windows.Forms.TextBox();
             this.txtSTUDENTID = new System.Windows.Forms.TextBox();
             this.txtTEACHERID = new System.Windows.Forms.TextBox();
-            this.txtSTATUS1 = new System.Windows.Forms.RadioButton();
-            this.txtSTATUS2 = new System.Windows.Forms.RadioButton();
             this.buttonSAVE = new System.Windows.Forms.Button();
             this.buttonCLEAR = new System.Windows.Forms.Button();
+            this.txtSTATUS = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // ad
@@ -114,29 +113,6 @@
             this.txtTEACHERID.Size = new System.Drawing.Size(156, 20);
             this.txtTEACHERID.TabIndex = 7;
             // 
-            // txtSTATUS1
-            // 
-            this.txtSTATUS1.AutoSize = true;
-            this.txtSTATUS1.Location = new System.Drawing.Point(205, 193);
-            this.txtSTATUS1.Name = "txtSTATUS1";
-            this.txtSTATUS1.Size = new System.Drawing.Size(83, 17);
-            this.txtSTATUS1.TabIndex = 8;
-            this.txtSTATUS1.TabStop = true;
-            this.txtSTATUS1.Text = "เสร็จสมบูรณ์";
-            this.txtSTATUS1.UseVisualStyleBackColor = true;
-            this.txtSTATUS1.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
-            // 
-            // txtSTATUS2
-            // 
-            this.txtSTATUS2.AutoSize = true;
-            this.txtSTATUS2.Location = new System.Drawing.Point(307, 193);
-            this.txtSTATUS2.Name = "txtSTATUS2";
-            this.txtSTATUS2.Size = new System.Drawing.Size(108, 17);
-            this.txtSTATUS2.TabIndex = 9;
-            this.txtSTATUS2.TabStop = true;
-            this.txtSTATUS2.Text = "ยังไม่เสร็จสมบูรณ์";
-            this.txtSTATUS2.UseVisualStyleBackColor = true;
-            // 
             // buttonSAVE
             // 
             this.buttonSAVE.Location = new System.Drawing.Point(141, 228);
@@ -145,6 +121,7 @@
             this.buttonSAVE.TabIndex = 10;
             this.buttonSAVE.Text = "ตกลง";
             this.buttonSAVE.UseVisualStyleBackColor = true;
+            this.buttonSAVE.Click += new System.EventHandler(this.ButtonSAVE_Click);
             // 
             // buttonCLEAR
             // 
@@ -155,15 +132,26 @@
             this.buttonCLEAR.Text = "ยกเลิก";
             this.buttonCLEAR.UseVisualStyleBackColor = true;
             // 
+            // txtSTATUS
+            // 
+            this.txtSTATUS.FormattingEnabled = true;
+            this.txtSTATUS.Items.AddRange(new object[] {
+            "เสร็จสมบูรณ์",
+            "ยังไม่เสร็จสมบูรณ์"});
+            this.txtSTATUS.Location = new System.Drawing.Point(205, 189);
+            this.txtSTATUS.Name = "txtSTATUS";
+            this.txtSTATUS.Size = new System.Drawing.Size(121, 21);
+            this.txtSTATUS.TabIndex = 12;
+            this.txtSTATUS.SelectedIndexChanged += new System.EventHandler(this.TxtSTATUS_SelectedIndexChanged);
+            // 
             // Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 289);
+            this.Controls.Add(this.txtSTATUS);
             this.Controls.Add(this.buttonCLEAR);
             this.Controls.Add(this.buttonSAVE);
-            this.Controls.Add(this.txtSTATUS2);
-            this.Controls.Add(this.txtSTATUS1);
             this.Controls.Add(this.txtTEACHERID);
             this.Controls.Add(this.txtSTUDENTID);
             this.Controls.Add(this.txtPROJECTNAME);
@@ -190,9 +178,8 @@
 		private System.Windows.Forms.TextBox txtPROJECTNAME;
 		private System.Windows.Forms.TextBox txtSTUDENTID;
 		private System.Windows.Forms.TextBox txtTEACHERID;
-		private System.Windows.Forms.RadioButton txtSTATUS1;
-		private System.Windows.Forms.RadioButton txtSTATUS2;
 		private System.Windows.Forms.Button buttonSAVE;
 		private System.Windows.Forms.Button buttonCLEAR;
-	}
+        private System.Windows.Forms.ComboBox txtSTATUS;
+    }
 }

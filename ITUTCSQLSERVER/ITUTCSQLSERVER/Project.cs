@@ -51,5 +51,22 @@ namespace ITUTCSQLSERVER
         {
 
         }
+
+        private void ButtonSAVE_Click(object sender, EventArgs e)
+        {
+            String PROJECTNAME = txtPROJECTNAME.Text;
+            String STUDENTID = txtSTUDENTID.Text;
+            String TEACHERID = txtTEACHERID.Text;
+           
+
+
+            Manager.InsertStudent(PROJECTNAME, STUDENTID, TEACHERID);
+            MessageBox.Show("บันทึก", "แจ้งเตือน");
+        }
+
+        private void TxtSTATUS_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,7 +29,12 @@ namespace ITUTCSQLSERVER
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
+            String TEACHER_NAME = txtTEACHER_NAME.Text;
+            String TEACHER_LASTNAME = txtTEACHER_LASTNAME.Text;
+            String TEACHER_TEL = txtTEACHER_TEL.Text;
+            String TEACHER_ADVISOR = txtTEACHER_ADVISOR.Text;
+            Manager.InsertTeacher(TEACHER_NAME, TEACHER_LASTNAME, TEACHER_TEL, TEACHER_ADVISOR);
+            MessageBox.Show("บันทึก", "แจ้งเตือน");
         }
 
         private void Label2_Click(object sender, EventArgs e)

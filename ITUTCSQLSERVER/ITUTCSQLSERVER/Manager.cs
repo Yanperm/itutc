@@ -126,5 +126,24 @@ namespace ITUTCSQLSERVER
                 Database.Connection.Close();
             }
         }
+        public static void InsertTeacher(string TEACHER_NAME, string TEACHER_LASTNAME, string TEACHER_TEL, string TEACHER_ADVISOR)
+        {
+            try
+            {
+                Database.Connection.Open();
+                string sqlCommand = @"INSERT INTO tbTeacher(TEACHER_NAME,TEACHER_LASTNAME,TEACHER_TEL,TEACHER_ADVISOR) VALUES(@TEACHER_NAME,@TEACHER_LASTNAME,@TEACHER_TEL,@TEACHER_ADVISOR)";
+                SqlCommand Command = new SqlCommand(sqlCommand, Database.Connection);
+                Command.Prepare();
+                Command.Parameters.AddWithValue("@TEACHER_NAME", TEACHER_NAME);
+                Command.Parameters.AddWithValue("@TEACHER_LASTNAME", TEACHER_LASTNAME);
+                Command.Parameters.AddWithValue("@TEACHER_TEL", TEACHER_TEL);
+                Command.Parameters.AddWithValue("@TEACHER_ADVISOR", TEACHER_ADVISOR);
+                Command.ExecuteNonQuery();
+            }
+            finally
+            {
+                Database.Connection.Close();
+            }
+        }
     }
 }
