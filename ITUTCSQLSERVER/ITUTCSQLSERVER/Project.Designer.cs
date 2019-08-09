@@ -36,8 +36,8 @@
             this.txtPROJECTNAME = new System.Windows.Forms.TextBox();
             this.txtSTUDENTID = new System.Windows.Forms.TextBox();
             this.txtTEACHERID = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.txtSTATUS1 = new System.Windows.Forms.RadioButton();
+            this.txtSTATUS2 = new System.Windows.Forms.RadioButton();
             this.buttonSAVE = new System.Windows.Forms.Button();
             this.buttonCLEAR = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -114,28 +114,28 @@
             this.txtTEACHERID.Size = new System.Drawing.Size(156, 20);
             this.txtTEACHERID.TabIndex = 7;
             // 
-            // radioButton1
+            // txtSTATUS1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(205, 193);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(83, 17);
-            this.radioButton1.TabIndex = 8;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "เสร็จสมบูรณ์";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
+            this.txtSTATUS1.AutoSize = true;
+            this.txtSTATUS1.Location = new System.Drawing.Point(205, 193);
+            this.txtSTATUS1.Name = "txtSTATUS1";
+            this.txtSTATUS1.Size = new System.Drawing.Size(83, 17);
+            this.txtSTATUS1.TabIndex = 8;
+            this.txtSTATUS1.TabStop = true;
+            this.txtSTATUS1.Text = "เสร็จสมบูรณ์";
+            this.txtSTATUS1.UseVisualStyleBackColor = true;
+            this.txtSTATUS1.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
-            // radioButton2
+            // txtSTATUS2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(307, 193);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(108, 17);
-            this.radioButton2.TabIndex = 9;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "ยังไม่เสร็จสมบูรณ์";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.txtSTATUS2.AutoSize = true;
+            this.txtSTATUS2.Location = new System.Drawing.Point(307, 193);
+            this.txtSTATUS2.Name = "txtSTATUS2";
+            this.txtSTATUS2.Size = new System.Drawing.Size(108, 17);
+            this.txtSTATUS2.TabIndex = 9;
+            this.txtSTATUS2.TabStop = true;
+            this.txtSTATUS2.Text = "ยังไม่เสร็จสมบูรณ์";
+            this.txtSTATUS2.UseVisualStyleBackColor = true;
             // 
             // buttonSAVE
             // 
@@ -162,8 +162,8 @@
             this.ClientSize = new System.Drawing.Size(481, 289);
             this.Controls.Add(this.buttonCLEAR);
             this.Controls.Add(this.buttonSAVE);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.txtSTATUS2);
+            this.Controls.Add(this.txtSTATUS1);
             this.Controls.Add(this.txtTEACHERID);
             this.Controls.Add(this.txtSTUDENTID);
             this.Controls.Add(this.txtPROJECTNAME);
@@ -190,8 +190,8 @@
 		private System.Windows.Forms.TextBox txtPROJECTNAME;
 		private System.Windows.Forms.TextBox txtSTUDENTID;
 		private System.Windows.Forms.TextBox txtTEACHERID;
-		private System.Windows.Forms.RadioButton radioButton1;
-		private System.Windows.Forms.RadioButton radioButton2;
+		private System.Windows.Forms.RadioButton txtSTATUS1;
+		private System.Windows.Forms.RadioButton txtSTATUS2;
 		private System.Windows.Forms.Button buttonSAVE;
 		private System.Windows.Forms.Button buttonCLEAR;
 	}
